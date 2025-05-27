@@ -175,6 +175,22 @@ namespace ExamenOrdinario
                 return false;
             }
         }
+        public (int disponibles, int vendidos) ContarPorEstado()
+        {
+            int disponibles = 0;
+            int vendidos = 0;
+
+            foreach (var auto in listaautos)
+            {
+                if (auto.Estado.ToLower() == "disponible")
+                    disponibles++;
+                else if (auto.Estado.ToLower() == "vendido")
+                    vendidos++;
+            }
+
+            return (disponibles, vendidos);
+        }
+
 
 
     }

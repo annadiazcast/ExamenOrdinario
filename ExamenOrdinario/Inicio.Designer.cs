@@ -51,6 +51,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnContar = new System.Windows.Forms.Button();
+            this.lblDisponibles = new System.Windows.Forms.Label();
+            this.lblVendidos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +100,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(102, 358);
+            this.label1.Location = new System.Drawing.Point(105, 367);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 16);
             this.label1.TabIndex = 4;
@@ -105,14 +108,14 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(49, 377);
+            this.txtId.Location = new System.Drawing.Point(52, 386);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(122, 22);
             this.txtId.TabIndex = 5;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(72, 414);
+            this.btnEliminar.Location = new System.Drawing.Point(75, 423);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 6;
@@ -252,11 +255,42 @@
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // btnContar
+            // 
+            this.btnContar.Location = new System.Drawing.Point(459, 405);
+            this.btnContar.Name = "btnContar";
+            this.btnContar.Size = new System.Drawing.Size(126, 41);
+            this.btnContar.TabIndex = 23;
+            this.btnContar.Text = "CONTAR AUTOS";
+            this.btnContar.UseVisualStyleBackColor = true;
+            this.btnContar.Click += new System.EventHandler(this.btnContar_Click);
+            // 
+            // lblDisponibles
+            // 
+            this.lblDisponibles.AutoSize = true;
+            this.lblDisponibles.Location = new System.Drawing.Point(473, 469);
+            this.lblDisponibles.Name = "lblDisponibles";
+            this.lblDisponibles.Size = new System.Drawing.Size(92, 16);
+            this.lblDisponibles.TabIndex = 24;
+            this.lblDisponibles.Text = "Disponibles: 0";
+            // 
+            // lblVendidos
+            // 
+            this.lblVendidos.AutoSize = true;
+            this.lblVendidos.Location = new System.Drawing.Point(473, 513);
+            this.lblVendidos.Name = "lblVendidos";
+            this.lblVendidos.Size = new System.Drawing.Size(78, 16);
+            this.lblVendidos.TabIndex = 25;
+            this.lblVendidos.Text = "Vendidos: 0";
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 766);
+            this.Controls.Add(this.lblVendidos);
+            this.Controls.Add(this.lblDisponibles);
+            this.Controls.Add(this.btnContar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtEstado);
@@ -313,5 +347,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnContar;
+        private System.Windows.Forms.Label lblDisponibles;
+        private System.Windows.Forms.Label lblVendidos;
     }
 }

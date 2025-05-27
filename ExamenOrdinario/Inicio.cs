@@ -65,5 +65,13 @@ namespace ExamenOrdinario
             else
                 MessageBox.Show("Fallo al importar");
         }
+
+        private void btnContar_Click(object sender, EventArgs e)
+        {
+            var (disponibles, vendidos) = acciones.ContarPorEstado();
+
+            lblDisponibles.Text = $"Disponibles: {disponibles}";
+            lblVendidos.Text = $"Vendidos: {vendidos}";
+        }
     }
 }
