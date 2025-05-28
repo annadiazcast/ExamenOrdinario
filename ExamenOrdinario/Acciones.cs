@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExamenOrdinario
 {
-    internal class Acciones:IAcciones
+    internal class Acciones : IAcciones
     {
         List<Auto> listaautos = new List<Auto>()
         {
@@ -175,20 +175,21 @@ namespace ExamenOrdinario
                 return false;
             }
         }
-        public (int disponibles, int vendidos) ContarPorEstado()
+        public int ContarAutos()
         {
-            int disponibles = 0;
-            int vendidos = 0;
+            int contador = 0;
+            return contador=listaautos.Count;
 
-            foreach (var auto in listaautos)
+        }
+        public double Suma()
+        {
+            double sumaprecios = 0;
+            foreach (var prec in listaautos)
             {
-                if (auto.Estado.ToLower() == "disponible")
-                    disponibles++;
-                else if (auto.Estado.ToLower() == "vendido")
-                    vendidos++;
+                sumaprecios = sumaprecios + prec.Precio;
             }
 
-            return (disponibles, vendidos);
+            return sumaprecios;
         }
 
 

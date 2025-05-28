@@ -12,8 +12,8 @@ namespace ExamenOrdinario
 {
     public partial class Inicio : Form
     {
-        Acciones acciones= new Acciones();
-        
+        Acciones acciones = new Acciones();
+
         public Inicio()
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace ExamenOrdinario
                 MessageBox.Show("Agregado con exito");
             else
                 MessageBox.Show("Error al agregar");
-          
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -67,11 +67,14 @@ namespace ExamenOrdinario
         }
 
         private void btnContar_Click(object sender, EventArgs e)
-        {
-            var (disponibles, vendidos) = acciones.ContarPorEstado();
+        { 
+            lblDisponibles.Text = $"Autos: {acciones.ContarAutos()}";
+        }
 
-            lblDisponibles.Text = $"Disponibles: {disponibles}";
-            lblVendidos.Text = $"Vendidos: {vendidos}";
+        private void btnSuma_Click(object sender, EventArgs e)
+        {
+
+            lblSumaPrecios.Text = $"La suma de los precios es: {acciones.Suma()}";
         }
     }
 }
